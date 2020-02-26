@@ -28,6 +28,11 @@ digital_root(493193)
 => 1 + 1
 => 2
 =end
+1. 
 def digital_root(n)
   n < 10 ? n : digital_root(n / 10 + n % 10)
  end
+2.
+def digital_root(n)
+  n < 10 ? n : digital_root(n.digits.sum)
+end 
